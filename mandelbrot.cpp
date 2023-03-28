@@ -68,7 +68,7 @@ int mandelbrotFrac(picture_t* picture)
     {
         double y0 = picture->scale * (picture->y_max - iterY*dy + picture->yc);  
         __m256d y0_arr = _mm256_set1_pd(y0);
-
+        
         for (int iterX = 0; iterX < picture->width; iterX++)
         {
             double  x0     = picture->scale * (picture->x_min + iterX*dx + picture->xc);
@@ -120,13 +120,13 @@ int cameraMotion(picture_t* picture, sf::Event &event)
     {
         switch (event.key.code)
         {
-            case sf::Keyboard::Key::S:     moveDown (picture); break;
-            case sf::Keyboard::Key::W:       moveUp   (picture); break;
-            case sf::Keyboard::Key::A:     moveLeft (picture); break;
-            case sf::Keyboard::Key::D:    moveRight(picture); break;
-            case sf::Keyboard::Key::R:     resetView(picture); break;
+            case sf::Keyboard::Key::S: moveDown (picture); break;
+            case sf::Keyboard::Key::W: moveUp   (picture); break;
+            case sf::Keyboard::Key::A: moveLeft (picture); break;
+            case sf::Keyboard::Key::D: moveRight(picture); break;
+            case sf::Keyboard::Key::R: resetView(picture); break;
 
-            case sf::Keyboard::Key::J:  zoomIn   (picture); break;
+            case sf::Keyboard::Key::J: zoomIn   (picture); break;
             case sf::Keyboard::Key::K: zoomOut  (picture); break;
             
             default: break;
