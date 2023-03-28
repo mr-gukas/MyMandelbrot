@@ -5,8 +5,8 @@ inline void moveDown (picture_t* picture) {picture->yc -= 5. * delta;}
 inline void moveUp   (picture_t* picture) {picture->yc += 5. * delta;}
 inline void moveLeft (picture_t* picture) {picture->xc -= 5. * delta;}
 inline void moveRight(picture_t* picture) {picture->xc += 5. * delta;}
-inline void zoomIn   (picture_t* picture) {picture->scale *= .5;}
-inline void zoomOut  (picture_t* picture) {picture->scale *= 1.2;}
+inline void zoomIn   (picture_t* picture) {picture->scale *= 3. / 4;}
+inline void zoomOut  (picture_t* picture) {picture->scale *= 4. / 3;}
 inline void resetView(picture_t* picture) 
 {
     picture->xc = x_centre;
@@ -18,7 +18,7 @@ int pictureCtor(picture_t* picture, size_t width, size_t height)
 {
     if (!picture) return 1;
 
-    unsigned char* pixels = (unsigned char*) calloc(4 * width * height, sizeof(unsigned char));
+    unsigned int* pixels = (unsigned int*) calloc(4 * width * height, sizeof(unsigned int));
     if (pixels == NULL) return 1;
 
     picture->pixels = pixels;
@@ -38,14 +38,20 @@ int pictureDtor(picture_t* picture)
 }
 
 
-int convert2clr(picture_t* picture, int iterX, int iterY, unsigned int n)
+int convert2clr(picture_t* picture, size_t pxlnum, int color)
 {
     if (picture == NULL) return 1;
-    
-    *(picture->pixels + 4 * iterY * picture->width + 4 * iterX) = (unsigned int) 100*n;
-    *(picture->pixels + 4 * iterY * picture->width + 4 * iterX + 1) = (unsigned int) (25 * (n%2));
-    *(picture->pixels + 4 * iterY * picture->width + 4 * iterX + 2) = (unsigned int) (10*(255-n));
-    *(picture->pixels + 4 * iterY * picture->width + 4 * iterX + 3) = (unsigned int) 0xFF;
+
+    if (color == n_max)
+        picture->pixels[pxlnum] = 0xFF000000;
+    else
+    {
+        picture->pixels[pxlnum] = ((unsigned char) (100 * color))              |
+                                  ((unsigned char) (25 * (color % 2)))   << 8  |
+                                  ((unsigned char) (10 * (255 - color))) << 16 |
+                                                                   0xFF  << 24;
+
+    }
 
     return 0;
 }
@@ -79,7 +85,7 @@ int mandelbrotFrac(picture_t* picture)
                 y = xy + xy + y0;
             }
             
-            convert2clr(picture, iterX, iterY, n);
+            convert2clr(picture, picture->width * iterY + iterX, n);
         }
     }
 
@@ -94,14 +100,14 @@ int cameraMotion(picture_t* picture, sf::Event &event)
     {
         switch (event.key.code)
         {
-            case sf::Keyboard::Key::J:     moveDown (picture); break;
-            case sf::Keyboard::Key::K:     moveUp   (picture); break;
-            case sf::Keyboard::Key::H:     moveLeft (picture); break;
-            case sf::Keyboard::Key::L:     moveRight(picture); break;
+            case sf::Keyboard::Key::S:     moveDown (picture); break;
+            case sf::Keyboard::Key::W:     moveUp   (picture); break;
+            case sf::Keyboard::Key::A:     moveLeft (picture); break;
+            case sf::Keyboard::Key::D:     moveRight(picture); break;
             case sf::Keyboard::Key::R:     resetView(picture); break;
 
-            case sf::Keyboard::Key::Left:  zoomIn   (picture); break;
-            case sf::Keyboard::Key::Right: zoomOut  (picture); break;
+            case sf::Keyboard::Key::J:  zoomIn   (picture); break;
+            case sf::Keyboard::Key::K:  zoomOut  (picture); break;
             
             default: break;
         }

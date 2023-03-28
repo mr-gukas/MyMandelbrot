@@ -34,7 +34,7 @@ struct picture_t
     double xc = -0.6;
     double yc = 0.0;
 
-    unsigned char* pixels;
+    unsigned int* pixels;
 };
 
 struct mandel_t
@@ -56,7 +56,7 @@ int mandelCtor(mandel_t* mandel);
 int pictureCtor(picture_t* picture, size_t width, size_t height);
 int pictureDtor(picture_t* picture);
 int mandelbrotFrac(picture_t* picture);
-int convert2clr(picture_t* picture, int iterX, int iterY, unsigned int n);
+int convert2clr(picture_t* picture, size_t pxlnum, int color);
 int cameraMotion(picture_t* picture, sf::Event &event);
 int setFps(mandel_t* mandel);
 int imageCtor(image_t* image, picture_t* picture);

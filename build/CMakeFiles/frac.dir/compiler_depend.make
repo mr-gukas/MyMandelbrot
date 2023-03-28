@@ -150,6 +150,7 @@ CMakeFiles/frac.dir/main.cpp.o: /home/gukas/asm/MyMandelbrot/main.cpp \
   /usr/include/bits/select.h \
   /usr/include/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/c++/12.2.1/bits/std_abs.h \
   /usr/include/c++/12.2.1/cstdio \
@@ -159,6 +160,7 @@ CMakeFiles/frac.dir/main.cpp.o: /home/gukas/asm/MyMandelbrot/main.cpp \
   /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/cookie_io_functions_t.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdio.h \
   /usr/include/c++/12.2.1/cerrno \
   /usr/include/errno.h \
   /usr/include/bits/errno.h \
@@ -438,6 +440,7 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
   /usr/include/bits/select.h \
   /usr/include/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/c++/12.2.1/bits/std_abs.h \
   /usr/include/c++/12.2.1/cstdio \
@@ -447,6 +450,7 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
   /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/cookie_io_functions_t.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdio.h \
   /usr/include/c++/12.2.1/cerrno \
   /usr/include/errno.h \
   /usr/include/bits/errno.h \
@@ -606,6 +610,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/SFML/Graphics/PrimitiveType.hpp:
 
+/usr/include/SFML/Graphics/Vertex.hpp:
+
 /usr/include/c++/12.2.1/debug/debug.h:
 
 /usr/include/c++/12.2.1/bits/stl_pair.h:
@@ -639,8 +645,6 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/c++/12.2.1/debug/assertions.h:
 
 /usr/include/c++/12.2.1/vector:
-
-/usr/include/SFML/Graphics/Vertex.hpp:
 
 /usr/include/sys/select.h:
 
@@ -734,8 +738,6 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/SFML/Window/Clipboard.hpp:
 
-/usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
-
 /usr/include/c++/12.2.1/bits/stl_function.h:
 
 /usr/include/gnu/stubs.h:
@@ -745,6 +747,10 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/c++/12.2.1/bits/ios_base.h:
 
 /usr/include/stdc-predef.h:
+
+/usr/include/SFML/Graphics/Color.hpp:
+
+/usr/include/SFML/System.hpp:
 
 /usr/include/features-time64.h:
 
@@ -966,6 +972,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/c++/12.2.1/bits/basic_string.h:
 
+/usr/include/bits/stdio.h:
+
 /usr/include/c++/12.2.1/ext/alloc_traits.h:
 
 /usr/include/c++/12.2.1/bits/alloc_traits.h:
@@ -989,6 +997,10 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/bits/types/sigset_t.h:
 
 /usr/include/alloca.h:
+
+/usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+
+/usr/include/bits/stdlib-bsearch.h:
 
 /usr/include/SFML/System/FileInputStream.hpp:
 
@@ -1149,7 +1161,3 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/SFML/Graphics/Transform.hpp:
 
 /usr/include/SFML/Graphics/VertexArray.hpp:
-
-/usr/include/SFML/System.hpp:
-
-/usr/include/SFML/Graphics/Color.hpp:
