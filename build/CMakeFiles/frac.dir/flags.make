@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS = -O3 -mavx2 -std=gnu++14
+CXX_FLAGS = -Ofast -mavx2 -std=gnu++14
 
