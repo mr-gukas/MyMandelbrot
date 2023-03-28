@@ -150,6 +150,7 @@ CMakeFiles/frac.dir/main.cpp.o: /home/gukas/asm/MyMandelbrot/main.cpp \
   /usr/include/bits/select.h \
   /usr/include/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/c++/12.2.1/bits/std_abs.h \
   /usr/include/c++/12.2.1/cstdio \
@@ -159,6 +160,7 @@ CMakeFiles/frac.dir/main.cpp.o: /home/gukas/asm/MyMandelbrot/main.cpp \
   /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/cookie_io_functions_t.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdio.h \
   /usr/include/c++/12.2.1/cerrno \
   /usr/include/errno.h \
   /usr/include/bits/errno.h \
@@ -287,7 +289,93 @@ CMakeFiles/frac.dir/main.cpp.o: /home/gukas/asm/MyMandelbrot/main.cpp \
   /usr/include/c++/12.2.1/istream \
   /usr/include/c++/12.2.1/bits/istream.tcc \
   /usr/include/c++/12.2.1/bits/sstream.tcc \
-  /usr/include/c++/12.2.1/stdlib.h
+  /usr/include/c++/12.2.1/stdlib.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/lzcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xtestintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/smmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/keylockerintrin.h
 
 CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cpp \
   /usr/include/stdc-predef.h \
@@ -438,6 +526,7 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
   /usr/include/bits/select.h \
   /usr/include/bits/types/sigset_t.h \
   /usr/include/alloca.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/c++/12.2.1/bits/std_abs.h \
   /usr/include/c++/12.2.1/cstdio \
@@ -447,6 +536,7 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
   /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/cookie_io_functions_t.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdio.h \
   /usr/include/c++/12.2.1/cerrno \
   /usr/include/errno.h \
   /usr/include/bits/errno.h \
@@ -575,10 +665,204 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
   /usr/include/c++/12.2.1/istream \
   /usr/include/c++/12.2.1/bits/istream.tcc \
   /usr/include/c++/12.2.1/bits/sstream.tcc \
-  /usr/include/c++/12.2.1/stdlib.h
+  /usr/include/c++/12.2.1/stdlib.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/lzcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xtestintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/smmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/keylockerintrin.h
 
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/keylockerintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/amxint8intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/vpclmulqdqintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/gfniintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/fmaintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512fp16intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bitalgintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vpopcntdqvlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vnniintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmi2vlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vpopcntdqintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmivlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512ifmavlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512ifmaintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vlbwintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512dqintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bwintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512cdintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512pfintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512erintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512fintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avxvnniintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avxintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/smmintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/tmmintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xtestintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsavesintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsaveoptintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vp2intersectintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsaveintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/wbnoinvdintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmi2intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/tsxldtrkintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/sgxintrin.h:
 
 /home/gukas/asm/MyMandelbrot/mandelbrot.cpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/serializeintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/rdseedintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/pkuintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/pconfigintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mwaitxintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mwaitintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/movdirintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/lzcntintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/fxsrintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/enqcmdintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/clwbintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/clflushoptintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/cldemoteintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/pmmintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/cetintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/bmi2intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/bmiintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/ia32intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/x86gprintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/immintrin.h:
 
 /usr/include/c++/12.2.1/bits/sstream.tcc:
 
@@ -590,7 +874,11 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/c++/12.2.1/bits/erase_if.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mmintrin.h:
+
 /usr/include/c++/12.2.1/bits/stl_multimap.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/shaintrin.h:
 
 /usr/include/c++/12.2.1/tuple:
 
@@ -606,7 +894,11 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/SFML/Graphics/PrimitiveType.hpp:
 
+/usr/include/SFML/Graphics/Vertex.hpp:
+
 /usr/include/c++/12.2.1/debug/debug.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx2intrin.h:
 
 /usr/include/c++/12.2.1/bits/stl_pair.h:
 
@@ -617,6 +909,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/SFML/Window/VideoMode.hpp:
 
 /usr/include/c++/12.2.1/bits/ptr_traits.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/rtmintrin.h:
 
 /usr/include/SFML/Graphics.hpp:
 
@@ -640,8 +934,6 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/c++/12.2.1/vector:
 
-/usr/include/SFML/Graphics/Vertex.hpp:
-
 /usr/include/sys/select.h:
 
 /usr/include/sys/single_threaded.h:
@@ -660,11 +952,15 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/bits/struct_mutex.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/wmmintrin.h:
+
 /usr/include/bits/thread-shared-types.h:
 
 /usr/include/bits/pthreadtypes.h:
 
 /usr/include/bits/atomic_wide_counter.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/amxtileintrin.h:
 
 /usr/include/bits/types/clock_t.h:
 
@@ -689,6 +985,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/bits/types/struct_sched_param.h:
 
 /usr/include/c++/12.2.1/bits/exception_ptr.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx5124vnniwintrin.h:
 
 /usr/include/c++/12.2.1/bits/invoke.h:
 
@@ -722,6 +1020,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/SFML/Graphics/BlendMode.hpp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vp2intersectvlintrin.h:
+
 /usr/include/c++/12.2.1/bits/stl_heap.h:
 
 /usr/include/bits/time64.h:
@@ -732,9 +1032,9 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/c++/12.2.1/bits/stl_algo.h:
 
-/usr/include/SFML/Window/Clipboard.hpp:
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/emmintrin.h:
 
-/usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+/usr/include/SFML/Window/Clipboard.hpp:
 
 /usr/include/c++/12.2.1/bits/stl_function.h:
 
@@ -742,11 +1042,19 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/bits/pthreadtypes-arch.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx5124fmapsintrin.h:
+
 /usr/include/c++/12.2.1/bits/ios_base.h:
 
 /usr/include/stdc-predef.h:
 
+/usr/include/SFML/Graphics/Color.hpp:
+
+/usr/include/SFML/System.hpp:
+
 /usr/include/features-time64.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/adxintrin.h:
 
 /usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/os_defines.h:
 
@@ -758,9 +1066,13 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/SFML/Window/Window.hpp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/popcntintrin.h:
+
 /usr/include/c++/12.2.1/bits/cxxabi_forced.h:
 
 /usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/uintrintrin.h:
 
 /usr/include/bits/libc-header-start.h:
 
@@ -774,6 +1086,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/SFML/System/Thread.hpp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vldqintrin.h:
+
 /usr/include/bits/types/mbstate_t.h:
 
 /usr/include/bits/long-double.h:
@@ -786,6 +1100,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/bits/stdint-intn.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bf16vlintrin.h:
+
 /usr/include/SFML/System/Thread.inl:
 
 /usr/include/SFML/System/Vector2.inl:
@@ -795,6 +1111,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/bits/endian.h:
 
 /home/gukas/asm/MyMandelbrot/mandelbrot.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/f16cintrin.h:
 
 /usr/include/c++/12.2.1/initializer_list:
 
@@ -812,6 +1130,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/c++/12.2.1/bits/locale_facets.tcc:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/vaesintrin.h:
+
 /usr/include/c++/12.2.1/bits/istream.tcc:
 
 /usr/include/c++/12.2.1/bits/stl_iterator.h:
@@ -819,6 +1139,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/sys/types.h:
 
 /usr/include/bits/wctype-wchar.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/amxbf16intrin.h:
 
 /usr/include/SFML/System/Time.hpp:
 
@@ -852,6 +1174,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/locale.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vnnivlintrin.h:
+
 /usr/include/SFML/Graphics/Export.hpp:
 
 /usr/include/c++/12.2.1/bits/stl_tree.h:
@@ -859,6 +1183,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/errno.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/stddef.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/tbmintrin.h:
 
 /usr/include/bits/types/wint_t.h:
 
@@ -890,7 +1216,11 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/stdint.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/mm_malloc.h:
+
 /usr/include/c++/12.2.1/bits/exception_defines.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/waitpkgintrin.h:
 
 /usr/include/c++/12.2.1/cstdlib:
 
@@ -908,6 +1238,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/bits/errno.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512bf16intrin.h:
+
 /usr/include/sched.h:
 
 /usr/include/wctype.h:
@@ -922,6 +1254,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/c++/12.2.1/bits/hash_bytes.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vbmiintrin.h:
+
 /usr/include/SFML/System/Lock.hpp:
 
 /usr/include/c++/12.2.1/bits/move.h:
@@ -931,6 +1265,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/bits/wchar.h:
 
 /usr/include/bits/types/struct___jmp_buf_tag.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/lwpintrin.h:
 
 /usr/include/c++/12.2.1/bits/stl_map.h:
 
@@ -966,11 +1302,15 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/c++/12.2.1/bits/basic_string.h:
 
+/usr/include/bits/stdio.h:
+
 /usr/include/c++/12.2.1/ext/alloc_traits.h:
 
 /usr/include/c++/12.2.1/bits/alloc_traits.h:
 
 /usr/include/c++/12.2.1/bits/codecvt.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512vlintrin.h:
 
 /usr/include/c++/12.2.1/bits/stl_construct.h:
 
@@ -990,6 +1330,10 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/alloca.h:
 
+/usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+
+/usr/include/bits/stdlib-bsearch.h:
+
 /usr/include/SFML/System/FileInputStream.hpp:
 
 /usr/include/SFML/Window.hpp:
@@ -1003,6 +1347,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/c++/12.2.1/bits/memoryfwd.h:
 
 /usr/include/bits/types/__fpos64_t.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xmmintrin.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
@@ -1025,6 +1371,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 /usr/include/SFML/Window/WindowStyle.hpp:
 
 /usr/include/asm-generic/errno.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/clzerointrin.h:
 
 /usr/include/c++/12.2.1/iosfwd:
 
@@ -1070,11 +1418,15 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/c++/12.2.1/bits/stl_tempbuf.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/hresetintrin.h:
+
 /usr/include/c++/12.2.1/bits/uniform_int_dist.h:
 
 /usr/include/SFML/Graphics/VertexBuffer.hpp:
 
 /usr/include/c++/12.2.1/locale:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/prfchwintrin.h:
 
 /usr/include/c++/12.2.1/bits/locale_facets_nonio.h:
 
@@ -1118,6 +1470,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/c++/12.2.1/bits/stl_bvector.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/avx512fp16vlintrin.h:
+
 /usr/include/SFML/System/String.inl:
 
 /usr/include/SFML/Window/Event.hpp:
@@ -1146,10 +1500,8 @@ CMakeFiles/frac.dir/mandelbrot.cpp.o: /home/gukas/asm/MyMandelbrot/mandelbrot.cp
 
 /usr/include/SFML/Graphics/Drawable.hpp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/xsavecintrin.h:
+
 /usr/include/SFML/Graphics/Transform.hpp:
 
 /usr/include/SFML/Graphics/VertexArray.hpp:
-
-/usr/include/SFML/System.hpp:
-
-/usr/include/SFML/Graphics/Color.hpp:
