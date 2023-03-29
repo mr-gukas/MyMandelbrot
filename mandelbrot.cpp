@@ -5,8 +5,18 @@ inline void moveDown (picture_t* picture) {picture->yc -= 5. * delta;}
 inline void moveUp   (picture_t* picture) {picture->yc += 5. * delta;}
 inline void moveLeft (picture_t* picture) {picture->xc -= 5. * delta;}
 inline void moveRight(picture_t* picture) {picture->xc += 5. * delta;}
-inline void zoomIn   (picture_t* picture) {picture->scale *= 3. / 4;}
-inline void zoomOut  (picture_t* picture) {picture->scale *= 4. / 3;}
+inline void zoomIn   (picture_t* picture)
+{
+    picture->scale *= .5;
+    picture->shift *= .5;
+}
+
+inline void zoomOut  (picture_t* picture)
+{
+    picture->scale *= 2.0;
+    picture->shift *= 2.0;
+}
+
 inline void resetView(picture_t* picture) 
 {
     picture->xc = x_centre;
@@ -46,11 +56,11 @@ int convert2clr(picture_t* picture, size_t pxlnum, int color)
         picture->pixels[pxlnum] = 0xFF000000;
     else
     {
-        picture->pixels[pxlnum] = ((unsigned char) (100 * color))              |
-                                  ((unsigned char) (25 * (color % 2)))   << 8  |
-                                  ((unsigned char) (10 * (255 - color))) << 16 |
-                                                                   0xFF  << 24;
-
+        color %= 16;
+        picture->pixels[pxlnum] = palette[color][0]       |
+                                  palette[color][1] << 8  |
+                                  palette[color][2] << 16 |
+                                              0xFF  << 24;
     }
 
     return 0;
@@ -62,11 +72,11 @@ int mandelbrotFrac(picture_t* picture)
 
     for (int iterY = 0; iterY < picture->height; iterY++)
     {
-        double y0 = picture->scale * (picture->y_max - iterY*dy + picture->yc);  
+        double y0 = picture->scale * (picture->y_max - iterY*dy) + picture->yc;  
 
         for (int iterX = 0; iterX < picture->width; iterX++)
         {
-            double x0 = picture->scale * (picture->x_min + iterX*dx + picture->xc);
+            double x0 = picture->scale * (picture->x_min + iterX*dx) + picture->xc;
             int n = 0;
 
             double x = 0.;
