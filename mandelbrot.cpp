@@ -1,5 +1,4 @@
 #include "mandelbrot.h"
-#include <immintrin.h>
 
 
 inline void moveDown (picture_t* picture) {picture->yc -= 5. * delta;}
@@ -61,51 +60,54 @@ int mandelbrotFrac(picture_t* picture)
 {
     if (!picture) return 1;
     
-    __m256d _3210  = _mm256_set_pd(3, 2, 1, 0);
-    __m256d r2_max = _mm256_set1_pd(r_max);
-
+    __m256 _3210   = _mm256_set_ps(7, 6, 5, 4, 3, 2, 1, 0);
+    __m256 r2_max  = _mm256_set1_ps(r_max);
+    __m256 DX      = _mm256_set1_ps(dx);
+    __m256 _3210dx = _mm256_mul_ps(_3210, DX);
+    
     for (int iterY = 0; iterY < picture->height; iterY++)
     {
         double y0 = picture->scale * (picture->y_max - iterY*dy + picture->yc);  
-        __m256d y0_arr = _mm256_set1_pd(y0);
-        
-        for (int iterX = 0; iterX < picture->width; iterX+= 1)
+        __m256 y0_arr = _mm256_set1_ps(y0);
+
+        double x0 =  picture->scale * (picture->x_min + picture->xc);
+
+        for (int iterX = 0; iterX < picture->width; iterX += 8, x0 += 8 * dx * picture->scale)
         {
-            double  x0     = picture->scale * (picture->x_min + iterX*dx + picture->xc);
-            __m256d x0_arr = _mm256_set1_pd(x0);
+            __m256 x0_arr = _mm256_add_ps(_mm256_set1_ps(x0), _mm256_mul_ps(_mm256_set1_ps(picture->scale), _3210dx));  
 
             __m256i N = _mm256_setzero_si256();
             int     n = 0;
 
-            __m256d x = _mm256_setzero_pd();
-            __m256d y = _mm256_setzero_pd();
+            __m256 x = x0_arr;
+            __m256 y = y0_arr;
 
             for (; n < n_max; ++n)
             {
-                __m256d x2 = _mm256_mul_pd(x, x);
-                __m256d y2 = _mm256_mul_pd(y, y);
-                __m256d r2 = _mm256_add_pd(x2, y2);
+                __m256 x2 = _mm256_mul_ps(x, x);
+                __m256 y2 = _mm256_mul_ps(y, y);
+                __m256 r2 = _mm256_add_ps(x2, y2);
 
-                __m256d cmp = _mm256_cmp_pd(r2, r2_max, _CMP_LE_OQ);
-                int    mask = _mm256_movemask_pd(cmp);
+                __m256 cmp = _mm256_cmp_ps(r2, r2_max, _CMP_LE_OQ);
+                int    mask = _mm256_movemask_ps(cmp);
 
                 if (!mask) break;
 
-                N = _mm256_sub_epi64(N, _mm256_castpd_si256(cmp));
+                N = _mm256_sub_epi32(N, _mm256_castps_si256(cmp));
 
-                __m256d xy = _mm256_mul_pd(x, y);
+                __m256 xy = _mm256_mul_ps(x, y);
 
-                x = _mm256_add_pd(_mm256_sub_pd(x2, y2), x0_arr);
-                y = _mm256_add_pd(_mm256_add_pd(xy, xy), y0_arr);
-
+                x = _mm256_add_ps(_mm256_sub_ps(x2, y2), x0_arr);
+                y = _mm256_add_ps(_mm256_add_ps(xy, xy), y0_arr);
             }
             
-            long long *colors = (long long *) &N;
+            int *colors = (int *) &N;
 
-            for (int pxlInd = 0; pxlInd < 4; ++pxlInd)
+            for (int pxlInd = 0; pxlInd < 8; ++pxlInd)
             {      
                 convert2clr(picture, picture->width * iterY + iterX + pxlInd, (int) colors[pxlInd]);
             }
+
         }
     }
 

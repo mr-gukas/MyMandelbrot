@@ -12,19 +12,19 @@
 
 const double delta = 0.1;
 const double dx    = 4.f / 800;
-const double dy    = 4.f / 600;
+const double dy    = 3.f / 600;
 const double x_centre = 0.;
 const double y_centre = 0.;
-
 const double r_max = 100.f;
 const size_t n_max = 256;
+
 
 struct picture_t
 {
     double x_max = 2.;
     double x_min = -2.;
-    double y_min = -2.;
-    double y_max = 2.;
+    double y_min = -1.5;
+    double y_max = 1.5;
 
     size_t width;
     size_t height;
@@ -33,8 +33,8 @@ struct picture_t
     double x0_init;
     double y0_init;
     
-    double xc = -0.6;
-    double yc = 0.0;
+    double xc = .0;
+    double yc = .0;
 
     unsigned int* pixels;
 };
