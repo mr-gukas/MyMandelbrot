@@ -69,7 +69,7 @@ int mandelbrotFrac(picture_t* picture)
         double y0 = picture->scale * (picture->y_max - iterY*dy + picture->yc);  
         __m256d y0_arr = _mm256_set1_pd(y0);
         
-        for (int iterX = 0; iterX < picture->width; iterX++)
+        for (int iterX = 0; iterX < picture->width; iterX+= 1)
         {
             double  x0     = picture->scale * (picture->x_min + iterX*dx + picture->xc);
             __m256d x0_arr = _mm256_set1_pd(x0);
