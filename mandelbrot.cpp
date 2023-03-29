@@ -20,6 +20,7 @@ inline void resetView(picture_t* picture)
     picture->xc = x_centre;
     picture->yc = y_centre;
     picture->scale = 1.;
+    picture->shift = .1;
 }
 
 int pictureCtor(picture_t* picture, size_t width, size_t height)
@@ -75,7 +76,7 @@ int mandelbrotFrac(picture_t* picture)
     
     for (int iterY = 0; iterY < picture->height; iterY++)
     {
-        float      y0 = picture->scale * (picture->y_max - iterY*dy + picture->yc);  
+        float      y0 = picture->scale * (picture->y_max - iterY*dy) + picture->yc;  
         __m256 y0_arr = _mm256_set1_ps(y0);
         float      x0 =  picture->scale * (picture->x_min) + picture->xc;
 
