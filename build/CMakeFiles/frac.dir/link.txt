@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/frac.dir/main.cpp.o CMakeFiles/frac.dir/mandelbrot.cpp.o -o frac  /usr/lib/libsfml-graphics.so.2.5.1 /usr/lib/libsfml-window.so.2.5.1 /usr/lib/libsfml-audio.so.2.5.1 /usr/lib/libsfml-system.so.2.5.1 

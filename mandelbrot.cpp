@@ -22,6 +22,7 @@ inline void resetView(picture_t* picture)
     picture->xc    = x_centre;
     picture->yc    = y_centre;
     picture->scale = 1.      ;
+    picture->shift = .1      ;
 }
 
 int pictureCtor(picture_t* picture, size_t width, size_t height)
