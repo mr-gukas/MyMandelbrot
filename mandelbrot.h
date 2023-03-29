@@ -8,14 +8,12 @@
 #include <sstream> // for std::ostringstream
 #include <stdlib.h>
 
-const float delta = 0.1;
-const float dx    = 4.f / 800;
-const float dy    = 4.f / 600;
+const float dx       = 4.f / 800;
+const float dy       = 3.f / 600;
 const float x_centre = -.5;
 const float y_centre = 0.;
-
-const float r_max  = 4.f;
-const size_t n_max = 256;
+const float r_max    = 4.f;
+const size_t n_max   = 256;
 
 const unsigned char palette[16][3] =
 {
@@ -39,10 +37,10 @@ const unsigned char palette[16][3] =
 
 struct picture_t
 {
-    float x_max = 2.;
-    float x_min = -2.;
-    float y_min = -2.;
-    float y_max = 2.;
+    float x_max =   2.;
+    float x_min =  -2.;
+    float y_min = -1.5;
+    float y_max =  1.5;
 
     size_t width;
     size_t height;
@@ -51,7 +49,7 @@ struct picture_t
     float scale = 1.;
     
     float xc = -.5;
-    float yc = 0.0;
+    float yc =  .0;
 
     unsigned int* pixels;
 };

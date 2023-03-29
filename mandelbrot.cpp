@@ -1,10 +1,10 @@
 #include "mandelbrot.h"
 
 
-inline void moveDown (picture_t* picture) {picture->yc -= 5. * delta;}
-inline void moveUp   (picture_t* picture) {picture->yc += 5. * delta;}
-inline void moveLeft (picture_t* picture) {picture->xc -= 5. * delta;}
-inline void moveRight(picture_t* picture) {picture->xc += 5. * delta;}
+inline void moveDown (picture_t* picture) {picture->yc -= 5. * picture->shift;}
+inline void moveUp   (picture_t* picture) {picture->yc += 5. * picture->shift;}
+inline void moveLeft (picture_t* picture) {picture->xc -= 5. * picture->shift;}
+inline void moveRight(picture_t* picture) {picture->xc += 5. * picture->shift;}
 inline void zoomIn   (picture_t* picture)
 {
     picture->scale *= .5;
@@ -19,9 +19,9 @@ inline void zoomOut  (picture_t* picture)
 
 inline void resetView(picture_t* picture) 
 {
-    picture->xc = x_centre;
-    picture->yc = y_centre;
-    picture->scale = 1.;
+    picture->xc    = x_centre;
+    picture->yc    = y_centre;
+    picture->scale = 1.      ;
 }
 
 int pictureCtor(picture_t* picture, size_t width, size_t height)
@@ -72,21 +72,21 @@ int mandelbrotFrac(picture_t* picture)
 
     for (int iterY = 0; iterY < picture->height; iterY++)
     {
-        double y0 = picture->scale * (picture->y_max - iterY*dy) + picture->yc;  
+        float y0 = picture->scale * (picture->y_max - iterY*dy + picture->yc);  
 
         for (int iterX = 0; iterX < picture->width; iterX++)
         {
-            double x0 = picture->scale * (picture->x_min + iterX*dx) + picture->xc;
+            float x0 = picture->scale * (picture->x_min + iterX*dx) + picture->xc;
+
+            float x = x0;
+            float y = y0;
+
             int n = 0;
-
-            double x = 0.;
-            double y = 0.;
-
             for (; n < n_max; ++n)
             {
-                double x2 = x*x;
-                double y2 = y*y;
-                double xy = x*y;
+                float x2 = x*x;
+                float y2 = y*y;
+                float xy = x*y;
 
                 if (x2+y2 > r_max)
                     break;
