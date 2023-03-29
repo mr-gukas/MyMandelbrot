@@ -9,32 +9,48 @@
 #include <stdlib.h>
 #include <immintrin.h>
 
-
-const double delta = 0.1;
-const double dx    = 4.f / 800;
-const double dy    = 3.f / 600;
-const double x_centre = 0.;
-const double y_centre = 0.;
-const double r_max = 100.f;
+const float dx    = 4.f / 800;
+const float dy    = 3.f / 600;
+const float x_centre = -0.5;
+const float y_centre = 0.;
+const float r_max = 4.f;
 const size_t n_max = 256;
 
+const unsigned char palette[16][3] =
+{
+    {60,   30,  15},
+    {25,    7,  26},
+    {9,     1,  47},
+    {4,     4,  73},
+    {0,     7, 100},
+    {12,   44, 138},
+    {24,   82, 177},
+    {57,  125, 209},
+    {134, 181, 229},
+    {211, 236, 248},
+    {241, 233, 191},
+    {248, 201,  95},
+    {255, 170,   0},
+    {204, 128,   0},
+    {153,  87,   0},
+    {106,  52,   3},
+};
 
 struct picture_t
 {
-    double x_max = 2.;
-    double x_min = -2.;
-    double y_min = -1.5;
-    double y_max = 1.5;
+    float x_max =   2.;
+    float x_min =  -2.;
+    float y_min = -1.5;
+    float y_max =  1.5;
 
     size_t width;
     size_t height;
     
-    double scale = 1.;
-    double x0_init;
-    double y0_init;
+    float shift = 0.1; 
+    float scale = 1.;
     
-    double xc = .0;
-    double yc = .0;
+    float xc = -.5;
+    float yc = .0;
 
     unsigned int* pixels;
 };
