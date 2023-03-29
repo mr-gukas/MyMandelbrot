@@ -11,7 +11,7 @@
 const double delta = 0.1;
 const double dx    = 4.f / 800;
 const double dy    = 4.f / 600;
-const double x_centre = -0.6;
+const double x_centre = .0;
 const double y_centre = 0.;
 
 const double r_max = 100.f;
@@ -31,7 +31,7 @@ struct picture_t
     double x0_init;
     double y0_init;
     
-    double xc = -0.6;
+    double xc = .0;
     double yc = 0.0;
 
     unsigned int* pixels;
