@@ -3,7 +3,7 @@
 This is a simple C++ program that uses SFML to draw the Mandelbrot set. The Mandelbrot set is a fractal that is created by iterating a complex function on a complex number and determining whether the result remains within a certain boundary. The resulting set is a complex boundary that exhibits self-similarity at different scales.
 
 ## Picture of the Mandelbrot set
-![Picture](mandelbrot.jpeg)
+![Picture](pictures/mandelbrot.jpeg)
 
 ## Dependencies
 
