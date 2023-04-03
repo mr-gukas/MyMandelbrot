@@ -70,3 +70,6 @@ You can move around the fractal using the hot keys: 1) use classic WASD for for 
 |:--:|
 | <b>Screenshot of the version that uses SIMD</b>|
 
+## Conclusion
+We observe a speedup of the program by 6-7 times when using SIMD AVX.
+By utilizing SIMD AVX instructions in our image processing program, we were able to achieve a significant improvement in performance compared to non-SIMD implementations. This approach offers advantages over relying solely on compiler optimization flags, including greater control over program behavior and potential for greater performance gains.
