@@ -1,0 +1,3 @@
+/home/gukas/asm/MyMandelbrot/build/CMakeFiles/frac.dir
+/home/gukas/asm/MyMandelbrot/build/CMakeFiles/edit_cache.dir
+/home/gukas/asm/MyMandelbrot/build/CMakeFiles/rebuild_cache.dir
